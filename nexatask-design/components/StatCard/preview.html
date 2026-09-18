@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap">
+<style>
+  .wrap{display:flex;flex-direction:column;gap:20px;padding:24px;font-family:var(--font-sans);background:var(--surface-page);}
+  .panel{background:var(--surface-sunken);border-radius:var(--radius-xl);padding:20px;display:flex;flex-wrap:wrap;gap:14px;}
+  .panel .head{width:100%;display:flex;align-items:center;gap:8px;color:var(--ink-on-dark);font-size:13px;font-weight:700;margin-bottom:4px;}
+  .chip{width:22px;height:22px;border-radius:6px;background:var(--brand-accent);display:inline-flex;align-items:center;justify-content:center;color:var(--brand-accent-ink);font-size:12px;font-weight:800;}
+  .tile{background:rgba(255,255,255,0.06);border-radius:var(--radius-md);padding:14px 18px;min-width:140px;flex:1;}
+  .tile .v{color:var(--ink-on-dark);font-size:22px;font-weight:700;}
+  .tile .l{color:var(--ink-on-dark-secondary);font-size:12px;font-weight:600;margin-top:2px;}
+  .row2{display:flex;gap:16px;flex-wrap:wrap;}
+  .card{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:16px 18px;flex:1;min-width:140px;box-shadow:var(--shadow-sm);}
+  .card .v{font-size:24px;font-weight:700;color:var(--ink);}
+  .card .l{font-size:12px;font-weight:600;color:var(--ink-secondary);margin-top:2px;}
+  .card.accent .v{color:var(--brand-deep);}
+</style>
+<div class="wrap">
+  <div class="panel">
+    <div class="head"><span class="chip">▤</span>Overall Performance</div>
+    <div class="tile"><div class="v">12,847</div><div class="l">Total Booking</div></div>
+    <div class="tile"><div class="v">125,450.00 ₼</div><div class="l">Total Revenue</div></div>
+    <div class="tile"><div class="v">5,429</div><div class="l">Active Users</div></div>
+    <div class="tile"><div class="v">102</div><div class="l">Pending Requests</div></div>
+  </div>
+  <div class="row2">
+    <div class="card"><div class="v">136</div><div class="l">Today's Check In</div></div>
+    <div class="card"><div class="v">673</div><div class="l">Current Guests</div></div>
+    <div class="card accent"><div class="v">65,450.00 ₼</div><div class="l">Today's Revenue</div></div>
+  </div>
+</div>

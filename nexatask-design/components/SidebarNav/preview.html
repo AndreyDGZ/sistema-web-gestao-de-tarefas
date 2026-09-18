@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap">
+<style>
+  .wrap{display:flex;gap:16px;padding:20px;font-family:var(--font-sans);background:var(--surface-page);}
+  .side{background:var(--surface-sidebar);border-radius:var(--radius-lg);padding:16px 12px;display:flex;flex-direction:column;gap:4px;width:220px;}
+  .side.collapsed{width:64px;align-items:center;}
+  .mark{width:26px;height:26px;border-radius:8px;background:var(--brand-accent);margin:2px 0 14px 6px;}
+  .side.collapsed .mark{margin-left:0;}
+  .item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-md);color:var(--ink-on-dark-secondary);font-size:14px;font-weight:700;}
+  .item .ic{width:18px;height:18px;border-radius:5px;background:currentColor;opacity:.55;flex:none;}
+  .item:hover{color:var(--ink-on-dark);}
+  .item.active{background:var(--brand-accent);color:var(--brand-accent-ink);}
+  .item.active .ic{opacity:1;}
+  .side.collapsed .item{padding:10px;justify-content:center;}
+  .side.collapsed .item span.txt{display:none;}
+</style>
+<div class="wrap">
+  <div class="side">
+    <div class="mark"></div>
+    <div class="item active"><span class="ic"></span><span class="txt">Home</span></div>
+    <div class="item"><span class="ic"></span><span class="txt">My Profile</span></div>
+    <div class="item"><span class="ic"></span><span class="txt">Reservations</span></div>
+    <div class="item"><span class="ic"></span><span class="txt">Calendar</span></div>
+    <div class="item"><span class="ic"></span><span class="txt">Reviews</span></div>
+  </div>
+  <div class="side collapsed">
+    <div class="mark"></div>
+    <div class="item active"><span class="ic"></span></div>
+    <div class="item"><span class="ic"></span></div>
+    <div class="item"><span class="ic"></span></div>
+    <div class="item"><span class="ic"></span></div>
+  </div>
+</div>

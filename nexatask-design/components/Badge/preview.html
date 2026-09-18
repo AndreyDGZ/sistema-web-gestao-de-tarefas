@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap">
+<style>
+  .wrap{display:flex;flex-direction:column;gap:16px;padding:24px;font-family:var(--font-sans);background:var(--surface-page);}
+  .row{display:flex;flex-wrap:wrap;gap:10px;}
+  .badge{border-radius:var(--radius-pill);padding:6px 14px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px;}
+  .dot{width:6px;height:6px;border-radius:999px;background:currentColor;}
+  .success{background:var(--status-success-bg);color:var(--status-success-ink);}
+  .warning{background:var(--status-warning-bg);color:var(--status-warning-ink);}
+  .danger{background:var(--status-danger-bg);color:var(--status-danger-ink);}
+  .info{background:var(--status-info-bg);color:var(--status-info-ink);}
+  .neutral{background:var(--surface-card-hover);color:var(--ink-secondary);}
+</style>
+<div class="wrap">
+  <div class="row">
+    <span class="badge success"><span class="dot"></span>Paid 100%</span>
+    <span class="badge warning"><span class="dot"></span>Paid 25%</span>
+    <span class="badge danger"><span class="dot"></span>Failed</span>
+    <span class="badge info"><span class="dot"></span>New Order</span>
+    <span class="badge neutral"><span class="dot"></span>Refunded</span>
+  </div>
+  <div class="row">
+    <span class="badge warning"><span class="dot"></span>Pending</span>
+    <span class="badge info"><span class="dot"></span>Items Picked Up</span>
+    <span class="badge success"><span class="dot"></span>Delivered</span>
+    <span class="badge danger"><span class="dot"></span>Courier On the Way</span>
+  </div>
+</div>

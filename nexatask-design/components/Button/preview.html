@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap">
+<style>
+  .wrap{display:flex;flex-direction:column;gap:20px;padding:24px;font-family:var(--font-sans);background:var(--surface-page);}
+  .row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;}
+  .row .lbl{width:96px;color:var(--ink-secondary);font-size:12px;font-weight:600;}
+  button{
+    font-family:var(--font-sans);font-weight:700;font-size:14px;line-height:20px;
+    border-radius:var(--radius-md);border:1px solid transparent;
+    padding:11px 20px;display:inline-flex;align-items:center;gap:8px;cursor:pointer;
+  }
+  .primary{background:var(--action-primary-bg);color:var(--action-primary-ink);}
+  .primary:hover{background:var(--action-primary-hover);}
+  .primary:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;}
+  .primary[disabled]{background:var(--surface-input-disabled);color:var(--ink-tertiary);cursor:not-allowed;}
+  .secondary{background:var(--surface-card);color:var(--ink);border-color:var(--border-subtle);}
+  .secondary:hover{background:var(--surface-card-hover);border-color:var(--border-strong);}
+  .secondary:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;}
+  .ghost{background:transparent;color:var(--ink-secondary);}
+  .ghost:hover{background:var(--surface-card-hover);color:var(--ink);}
+  .danger{background:var(--status-danger-bg);color:var(--status-danger-ink);}
+  .danger:hover{filter:brightness(0.97);}
+  .accent{background:var(--brand-accent);color:var(--brand-accent-ink);}
+  .accent:hover{filter:brightness(0.96);}
+</style>
+<div class="wrap">
+  <div class="row"><span class="lbl">Primary</span>
+    <button class="primary">‹ Submit ›</button>
+    <button class="primary">Add New Note</button>
+    <button class="primary" disabled>‹ Submit ›</button>
+  </div>
+  <div class="row"><span class="lbl">Secondary</span>
+    <button class="secondary">‹ Go Back ›</button>
+    <button class="secondary">Next Step ›</button>
+  </div>
+  <div class="row"><span class="lbl">Ghost / Danger</span>
+    <button class="ghost">Cancel</button>
+    <button class="danger">Delete</button>
+    <button class="accent">Add New Car</button>
+  </div>
+</div>

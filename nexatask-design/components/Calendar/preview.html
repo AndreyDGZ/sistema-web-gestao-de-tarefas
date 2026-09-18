@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap">
+<style>
+  .wrap{padding:20px;font-family:var(--font-sans);background:var(--surface-page);}
+  .cal{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:16px;box-shadow:var(--shadow-sm);max-width:520px;}
+  .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-weight:700;color:var(--ink);}
+  .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;}
+  .day{font-size:11px;font-weight:700;color:var(--ink-secondary);text-align:center;padding-bottom:4px;}
+  .cell{min-height:34px;border-radius:var(--radius-sm);display:flex;align-items:flex-start;justify-content:center;padding-top:4px;font-size:13px;color:var(--ink);}
+  .cell.today{background:var(--ink);color:var(--ink-on-dark);border-radius:999px;width:26px;height:26px;justify-self:center;padding:0;align-items:center;}
+  .chip{grid-column:span 3;background:var(--accent-violet-bg);color:var(--accent-violet);border-radius:var(--radius-sm);padding:6px 8px;font-size:11px;font-weight:700;}
+  .chip.amber{background:var(--accent-amber-bg);color:var(--accent-amber);}
+  .chip.teal{background:var(--accent-teal-bg);color:var(--accent-teal);}
+  .chip .sub{display:block;font-weight:600;opacity:.8;font-size:10px;}
+</style>
+<div class="wrap">
+  <div class="cal">
+    <div class="head"><span>‹</span><span>November, 2025</span><span>›</span></div>
+    <div class="grid">
+      <div class="day">Mon</div><div class="day">Tue</div><div class="day">Wed</div><div class="day">Thu</div><div class="day">Fri</div><div class="day">Sat</div><div class="day">Sun</div>
+      <div class="cell">27</div><div class="cell">28</div><div class="cell">29</div><div class="cell">30</div><div class="cell">31</div><div class="cell today">1</div><div class="cell">2</div>
+      <div class="cell">3</div><div class="cell">4</div><div class="cell">5</div><div class="cell">6</div><div class="cell">7</div><div class="cell">8</div><div class="cell">9</div>
+      <div class="cell">10</div><div class="cell">11</div><div class="cell">12</div>
+      <div class="chip">Múzaffar Tağıyev<span class="sub">Double room</span></div>
+      <div class="cell">16</div>
+      <div class="chip amber">Múzaffar Tağıyev<span class="sub">Double room</span></div>
+    </div>
+  </div>
+</div>

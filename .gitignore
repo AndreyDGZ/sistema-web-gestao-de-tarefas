@@ -1,0 +1,12 @@
+node_modules
+dist
+apps/web/dist
+packages/shared/dist
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+.env
+.env.*
+
+.vercel
+.env*
