@@ -4,17 +4,17 @@
   "routes": [
     {
       "src": "^/api/tasks/([^/]+)$",
-      "dest": "/api/tasks/[id]?id=$1"
+      "dest": "/api/tasks/[id].ts?id=$1"
     },
     {
       "src": "^/api/tasks$",
-      "dest": "/api/tasks/index"
+      "dest": "/api/tasks/index.ts"
     },
     {
       "handle": "filesystem"
     },
     {
-      "src": "^/(.*)$",
+      "src": "^/(?!api(?:/|$)).*$",
       "dest": "/index.html"
     }
   ]
