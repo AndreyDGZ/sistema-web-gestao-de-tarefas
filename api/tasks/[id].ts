@@ -1,4 +1,4 @@
-import { taskItemHandler } from '../../apps/api/src/taskHandlers'
+import { taskItemHandler } from '../../apps/api/src/taskHandlers.js'
 
 function getTaskId(request: Request): string {
   const url = new URL(request.url)

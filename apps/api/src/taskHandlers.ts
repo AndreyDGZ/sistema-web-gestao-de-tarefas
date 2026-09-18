@@ -1,6 +1,6 @@
 import { TaskResponse, TasksResponse, taskPayloadSchema } from '@nexatask/shared'
-import { badRequest, jsonResponse, methodNotAllowed, notFound, serverError } from './http'
-import { createTask, deleteTask, listTasks, updateTask } from './taskRepository'
+import { badRequest, jsonResponse, methodNotAllowed, notFound, serverError } from './http.js'
+import { createTask, deleteTask, listTasks, updateTask } from './taskRepository.js'
 
 async function readRequestBody(request: Request): Promise<unknown> {
   return request.json()

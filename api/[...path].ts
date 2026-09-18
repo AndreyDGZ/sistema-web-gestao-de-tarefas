@@ -1,5 +1,5 @@
-import { taskItemHandler, tasksCollectionHandler } from '../apps/api/src/taskHandlers'
-import { notFound } from '../apps/api/src/http'
+import { taskItemHandler, tasksCollectionHandler } from '../apps/api/src/taskHandlers.js'
+import { notFound } from '../apps/api/src/http.js'
 
 function getApiPath(request: Request): string {
   const requestUrl = new URL(request.url)
