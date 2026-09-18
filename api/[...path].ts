@@ -2,7 +2,7 @@ import { taskItemHandler, tasksCollectionHandler } from '../apps/api/src/taskHan
 import { notFound } from '../apps/api/src/http.js'
 
 function getApiPath(request: Request): string {
-  const requestUrl = new URL(request.url)
+  const requestUrl = new URL(request.url, 'https://nexatask.local')
 
   return requestUrl.pathname.replace(/^\/api\/?/, '')
 }
