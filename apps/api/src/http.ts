@@ -36,9 +36,18 @@ export function notFound(): Response {
   return jsonResponse(body, { status: 404 })
 }
 
-export function serverError(): Response {
+function getErrorMessage(error: unknown): string {
+  if (error instanceof Error) {
+    return error.message
+  }
+
+  return 'Erro desconhecido.'
+}
+
+export function serverError(error?: unknown): Response {
   const body: ApiErrorResponse = {
     message: 'Nao foi possivel processar a solicitacao.',
+    issues: error ? [getErrorMessage(error)] : undefined,
   }
 
   return jsonResponse(body, { status: 500 })
