@@ -30,8 +30,8 @@ export async function tasksCollectionHandler(request: Request): Promise<Response
     }
 
     return methodNotAllowed()
-  } catch (error) {
-    return serverError(error)
+  } catch {
+    return serverError()
   }
 }
 
@@ -67,7 +67,7 @@ export async function taskItemHandler(request: Request, taskId: string): Promise
     }
 
     return methodNotAllowed()
-  } catch (error) {
-    return serverError(error)
+  } catch {
+    return serverError()
   }
 }
