@@ -27,7 +27,7 @@ const sql = postgres(databaseUrl, {
 
 const seedTasks: Task[] = [
   {
-    id: '1',
+    id: '11111111-1111-4111-8111-111111111111',
     title: 'Criar prototipo do Dashboard',
     description: 'Estruturar a primeira visao do quadro e seus indicadores.',
     assigneeName: 'Andrey',
@@ -38,7 +38,7 @@ const seedTasks: Task[] = [
     updatedAt: seedDate,
   },
   {
-    id: '2',
+    id: '22222222-2222-4222-8222-222222222222',
     title: 'Revisar tela de Login',
     description: 'Conferir consistencia visual e estados de formulario.',
     assigneeName: 'Lucas',
@@ -49,7 +49,7 @@ const seedTasks: Task[] = [
     updatedAt: seedDate,
   },
   {
-    id: '3',
+    id: '33333333-3333-4333-8333-333333333333',
     title: 'Validar versao mobile',
     description: 'Testar abas, cards em coluna unica e alvos de toque.',
     assigneeName: 'Maria',
@@ -60,7 +60,7 @@ const seedTasks: Task[] = [
     updatedAt: seedDate,
   },
   {
-    id: '4',
+    id: '44444444-4444-4444-8444-444444444444',
     title: 'Preparar apresentacao',
     description: 'Organizar o roteiro da demonstracao do MVP.',
     assigneeName: 'Joao',
