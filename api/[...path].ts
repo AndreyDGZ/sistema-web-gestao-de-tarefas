@@ -1,5 +1,7 @@
 import { taskItemHandler, tasksCollectionHandler } from '../apps/api/src/taskHandlers.js'
 import { notFound } from '../apps/api/src/http.js'
+import { handleVercelRequest } from '../apps/api/src/vercelAdapter.js'
+import { IncomingMessage, ServerResponse } from 'node:http'
 
 function getApiPath(request: Request): string {
   const requestUrl = new URL(request.url, 'https://nexatask.local')
@@ -7,7 +9,7 @@ function getApiPath(request: Request): string {
   return requestUrl.pathname.replace(/^\/api\/?/, '')
 }
 
-export default async function handler(request: Request): Promise<Response> {
+async function apiHandler(request: Request): Promise<Response> {
   const apiPath = getApiPath(request)
 
   if (apiPath === 'tasks') {
@@ -23,4 +25,8 @@ export default async function handler(request: Request): Promise<Response> {
   }
 
   return notFound()
+}
+
+export default async function handler(request: IncomingMessage, response: ServerResponse): Promise<void> {
+  await handleVercelRequest(request, response, apiHandler)
 }

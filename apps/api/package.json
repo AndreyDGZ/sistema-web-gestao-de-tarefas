@@ -11,5 +11,8 @@
     "@supabase/supabase-js": "^2.116.0",
     "postgres": "^3.4.7",
     "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2"
   }
 }
