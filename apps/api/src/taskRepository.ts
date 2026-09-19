@@ -100,6 +100,14 @@ async function ensureTasksTable(): Promise<void> {
       updated_at TEXT NOT NULL
     )
   `
+  await sql`ALTER TABLE tasks ADD COLUMN IF NOT EXISTS title TEXT`
+  await sql`ALTER TABLE tasks ADD COLUMN IF NOT EXISTS description TEXT`
+  await sql`ALTER TABLE tasks ADD COLUMN IF NOT EXISTS status TEXT`
+  await sql`ALTER TABLE tasks ADD COLUMN IF NOT EXISTS priority TEXT`
+  await sql`ALTER TABLE tasks ADD COLUMN IF NOT EXISTS assignee_name TEXT`
+  await sql`ALTER TABLE tasks ADD COLUMN IF NOT EXISTS due_date TEXT`
+  await sql`ALTER TABLE tasks ADD COLUMN IF NOT EXISTS created_at TEXT`
+  await sql`ALTER TABLE tasks ADD COLUMN IF NOT EXISTS updated_at TEXT`
 }
 
 async function seedTasksWhenEmpty(): Promise<void> {
@@ -130,7 +138,15 @@ export async function listTasks(): Promise<Task[]> {
   await prepareDatabase()
 
   const tasksResult = await sql<TaskRow[]>`
-    SELECT id, title, description, status, priority, assignee_name, due_date, created_at, updated_at
+    SELECT id,
+           COALESCE(title, '') AS title,
+           COALESCE(description, '') AS description,
+           COALESCE(status, 'TODO') AS status,
+           COALESCE(priority, 'MEDIUM') AS priority,
+           COALESCE(assignee_name, '') AS assignee_name,
+           COALESCE(due_date, '') AS due_date,
+           COALESCE(created_at, '') AS created_at,
+           COALESCE(updated_at, '') AS updated_at
     FROM tasks
     ORDER BY created_at DESC
   `
