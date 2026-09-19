@@ -22,6 +22,7 @@ if (!databaseUrl) {
 
 const sql = postgres(databaseUrl, {
   ssl: 'require',
+  prepare: false,
 })
 
 const seedTasks: Task[] = [
