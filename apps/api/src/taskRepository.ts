@@ -144,9 +144,9 @@ export async function listTasks(): Promise<Task[]> {
            COALESCE(status, 'TODO') AS status,
            COALESCE(priority, 'MEDIUM') AS priority,
            COALESCE(assignee_name, '') AS assignee_name,
-           COALESCE(due_date, '') AS due_date,
-           COALESCE(created_at, '') AS created_at,
-           COALESCE(updated_at, '') AS updated_at
+           COALESCE(due_date::text, '') AS due_date,
+           COALESCE(created_at::text, ${seedDate}) AS created_at,
+           COALESCE(updated_at::text, ${seedDate}) AS updated_at
     FROM tasks
     ORDER BY created_at DESC
   `
